@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+	font-family: Sora;
+	src: url('./assets/fonts/Sora-Regular.ttf');
+}
+
+@font-face {
+	font-family: Bungee;
+	src: url('./assets/fonts/Bungee-Regular.ttf');
+}
+
+@font-face {
+	font-family: Martian;
+	src: url('./assets/fonts/MartianMono-Regular.ttf');
+}
+
+
+* {
+	font-family: 'Sora', sans-serif;
+}
