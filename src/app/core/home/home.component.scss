@@ -1,51 +1,87 @@
-.wrapper {
+.neon {
+  min-height: 100%;
   display: flex;
-  height: 100%;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+
+  &__name {
+  	//5rem
+    font-size: 3.5rem;
+    font-family: 'NeonBines';
+    text-align: center;
+    line-height: 1;
+    color: #c6e2ff;
+    animation: neon .08s ease-in-out infinite alternate;
+  }
+
+  &__profession {
+  	//2.5rem
+  	font-size: 1.5rem;
+    font-family: 'Neon';
+    text-align: center;
+    line-height: 1;
+    color: #c6e2ff;
+    animation: neon .08s ease-in-out infinite alternate;
+  }
+
+
+  &__link {
+	font-size: 1.5rem;
+	color: #828282;
+	text-decoration: none;
+	border: 2px solid #828282;
+    padding: 0.5rem 1.5rem;
+	
+	&:focus,
+	&:hover {
+    color: #c6e2ff;
+		text-shadow:
+    0 0 2px rgba(202,228,225,0.92),
+    0 0 10px rgba(202,228,225,0.34),
+    0 0 4px rgba(30,132,242,0.52),
+    0 0 7px rgba(30,132,242,0.92),
+    0 0 11px rgba(30,132,242,0.78),
+    0 0 16px rgba(30,132,242,0.92);
+	}
+  }
+
 }
 
-svg {
-    display: block;
-    font: 8em 'Bungee';
-    width: 960px;
-    height: 300px;
-    margin: 0 auto;
+
+
+/*-- Animation Keyframes --*/
+@keyframes neon {
+  from {
+    text-shadow:
+    0 0 6px rgba(202,228,225,0.92),
+    0 0 30px rgba(202,228,225,0.34),
+    0 0 12px rgba(30,132,242,0.52),
+    0 0 21px rgba(30,132,242,0.92),
+    0 0 34px rgba(30,132,242,0.78),
+    0 0 54px rgba(30,132,242,0.92);
+  }
+  to {
+    text-shadow:
+    0 0 6px rgba(202,228,225,0.98),
+    0 0 30px rgba(202,228,225,0.42),
+    0 0 12px rgba(30,132,242,0.58),
+    0 0 22px rgba(30,132,242,0.84),
+    0 0 38px rgba(30,132,242,0.88),
+    0 0 60px rgba(30,132,242,1);
+  }
 }
 
-.text-copy {
-    fill: none;
-    stroke: white;
-    stroke-dasharray: 6% 29%;
-    stroke-width: 5px;
-    stroke-dashoffset: 0%;
-    animation: stroke-offset 5.5s infinite linear;
-}
 
-.text-copy:nth-child(1){
-	stroke: #4D163D;
-	animation-delay: -1;
-}
 
-.text-copy:nth-child(2){
-	stroke: #840037;
-	animation-delay: -2s;
-}
-
-.text-copy:nth-child(3){
-	stroke: #BD0034;
-	animation-delay: -3s;
-}
-
-.text-copy:nth-child(4){
-	stroke: #BD0034;
-	animation-delay: -4s;
-}
-
-.text-copy:nth-child(5){
-	stroke: #FDB731;
-	animation-delay: -5s;
-}
-
-@keyframes stroke-offset{
-	100% {stroke-dashoffset: -35%;}
+/*-- Media Queries --*/
+@media (min-width: 768px) {
+	.neon {
+		&__name {
+			font-size: 4rem;
+		}
+		&__profession {
+			font-size: 2rem;
+		}
+	}
 }
