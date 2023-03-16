@@ -6,6 +6,7 @@ import { ProjectsComponent } from './projects.component';
 import { CardComponent } from './components/card/card.component';
 import { SpinnerComponent } from '../../components/spinner/spinner.component';
 import { ImageComponent } from '../../components/image/image.component';
+import { ButtonBackComponent } from './components/button-back/button-back.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ImageComponent } from '../../components/image/image.component';
     ProjectsComponent,
     CardComponent,
     SpinnerComponent,
-    ImageComponent
+    ImageComponent,
+    ButtonBackComponent
   ],
   imports: [
     CommonModule,

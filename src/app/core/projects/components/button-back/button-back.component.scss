@@ -1,0 +1,31 @@
+ .neon__link {
+ 	position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+	font-size: 1rem;
+	background-color: hsla(0, 0%, 51%, 0.75);
+	color: #000000;
+	text-decoration: none;
+	border: 2px solid #828282;
+  padding: 0.5rem 1.5rem;
+
+  svg path {
+  	fill: #000000;
+  }
+	
+	&:focus,
+	&:hover {
+    color: #c6e2ff;
+		text-shadow:
+    0 0 2px rgba(202,228,225,0.92),
+    0 0 10px rgba(202,228,225,0.34),
+    0 0 4px rgba(30,132,242,0.52),
+    0 0 7px rgba(30,132,242,0.92),
+    0 0 11px rgba(30,132,242,0.78),
+    0 0 16px rgba(30,132,242,0.92);
+
+    svg path {
+  		fill: #cae4e1;
+  	}
+	}
+}
