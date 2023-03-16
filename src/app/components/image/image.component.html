@@ -1,0 +1,4 @@
+<div class="d-flex justify-content-center align-items-center">
+	<img [attr.width]="customWidth" [attr.height]="customHeight" [src]="image" [hidden]="loading" (load)="this.loading = false;"/>
+	<app-spinner [hidden]="!loading"></app-spinner>
+</div>
